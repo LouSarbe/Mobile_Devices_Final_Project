@@ -40,7 +40,7 @@ class UsersFragment : Fragment() {
         inputData?.let {
             name_text_view.text = it["name"]
             email_text_view.text = it["email"]
-            // Display other input data as needed
+            age_text_view.text = it["age"]
         }
 
         // Load and display data from a public JSON file

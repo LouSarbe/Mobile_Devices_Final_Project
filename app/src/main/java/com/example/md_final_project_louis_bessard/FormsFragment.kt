@@ -40,6 +40,7 @@ class FormsFragment : Fragment() {
         // Example: Getting data from EditText fields
         formData["name"] = name_edit_text.text.toString()
         formData["email"] = email_edit_text.text.toString()
+        formData["age"] = age_edit_text.text.toString()
         // Add other form fields as needed
 
         return formData
