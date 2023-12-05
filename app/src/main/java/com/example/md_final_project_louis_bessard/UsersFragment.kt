@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import org.json.JSONArray
 import java.io.InputStream
 
-class UsersFragment : Fragment() {
+class UsersFragment : Fragment(R.layout.fragment_users) {
 
     companion object {
         private const val INPUT_DATA_KEY = "inputData"
@@ -38,9 +38,9 @@ class UsersFragment : Fragment() {
 
         // Display input data in the UI
         inputData?.let {
-            name_text_view.text = it["name"]
-            email_text_view.text = it["email"]
-            age_text_view.text = it["age"]
+            R.id.name_text_view = it["name"]
+            R.id.email_text_view = it["email"]
+            R.id.age_text_view = it["age"]
         }
 
         // Load and display data from a public JSON file
@@ -48,7 +48,7 @@ class UsersFragment : Fragment() {
         val jsonArray = JSONArray(jsonText)
 
         // Example: Displaying JSON data in a TextView
-        json_data_text_view.text = jsonArray.toString()
+        //json_data_text_view.text = jsonArray.toString()
     }
 
     private fun loadJSONFromAsset(): String {

@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:tools="http://schemas.android.com/tools"
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent">
 
+    <TextView
+            android:text="@string/remplissez_le_formulaire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            tools:layout_editor_absoluteY="73dp"
+            tools:layout_editor_absoluteX="128dp"
+            tools:ignore="MissingConstraints"/>
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="79dp"
+            tools:layout_editor_absoluteY="148dp"
+            tools:ignore="MissingConstraints">
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="278dp"
+            tools:ignore="MissingConstraints">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/age_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="436dp"
+            tools:ignore="MissingConstraints">
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nom"
+            tools:layout_editor_absoluteY="162dp"
+            tools:layout_editor_absoluteX="142dp"
+            tools:ignore="MissingConstraints"/>
+    <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            tools:layout_editor_absoluteY="278dp"
+            tools:layout_editor_absoluteX="177dp"
+            tools:ignore="MissingConstraints"/>
+    <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/age"
+            tools:layout_editor_absoluteY="436dp"
+            tools:layout_editor_absoluteX="99dp"
+            tools:ignore="MissingConstraints"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/submit_button"
+            tools:layout_editor_absoluteY="553dp"
+            tools:layout_editor_absoluteX="162dp"
+            android:text="@string/submit"
+            tools:ignore="MissingConstraints"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

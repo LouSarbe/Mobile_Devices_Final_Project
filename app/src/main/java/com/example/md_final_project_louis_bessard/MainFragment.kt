@@ -5,7 +5,9 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.md_final_project_louis_bessard.R
-
+import com.example.md_final_project_louis_bessard.UsersFragment
+import com.example.md_final_project_louis_bessard.FormsFragment
+import androidx.navigation.fragment.findNavController
 
 class MainFragment : Fragment() {
 
@@ -21,7 +23,7 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.go_to_forms_button).setOnClickListener {
-            navigateToFormsFragment().navigate(R.id.action_mainFragment_to_formsFragment)
+            findNavController().navigate(R.id.action_mainFragment_to_formsFragment)
         }
     }
 
