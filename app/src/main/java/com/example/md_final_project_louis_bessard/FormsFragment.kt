@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.textfield.TextInputEditText
 
 class FormsFragment : Fragment(R.layout.fragment_forms) {
 
@@ -20,29 +22,32 @@ class FormsFragment : Fragment(R.layout.fragment_forms) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.submit_button).setOnClickListener {
-            // Collect form data
-            val inputData = collectFormData()
+        view.findViewById<Button>(R.id.forms_to_home_button).setOnClickListener {
+            findNavController().navigate(R.id.action_formsFragment_to_mainFragment)
+        }
 
-            // Pass data to UsersFragment
-            val usersFragment = UsersFragment.newInstance(inputData)
+        view.findViewById<Button>(R.id.forms_to_userList_button).setOnClickListener {
+            findNavController().navigate(R.id.action_formsFragment_to_userList)
+        }
+
+        view.findViewById<Button>(R.id.submit_button).setOnClickListener {
+            // Collect form data and create a User object
+            val user = collectFormData()
+
+            // Pass User data to UserList using arguments
+            val userList = UserList.newInstance(user.toMap())
             activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.fragmentContainerView, usersFragment)
+                ?.replace(R.id.fragmentContainerView, userList)
                 ?.addToBackStack(null)
                 ?.commit()
         }
     }
 
-    private fun collectFormData(): Map<String, String> {
-        // Retrieve form data and convert it into a map
-        val formData = mutableMapOf<String, String>()
+    private fun collectFormData(): User {
+        val name = view?.findViewById<TextInputEditText>(R.id.name_edit_text)?.text.toString()
+        val email = view?.findViewById<TextInputEditText>(R.id.email_edit_text)?.text.toString()
+        val age = view?.findViewById<TextInputEditText>(R.id.age_edit_text)?.text.toString()
 
-        // Example: Getting data from EditText fields
-        formData["name"] = R.id.name_edit_text.toString()
-        formData["email"] = R.id.email_edit_text.toString()
-        formData["age"] = R.id.age_edit_text.toString()
-        // Add other form fields as needed
-
-        return formData
+        return User(name, email, age)
     }
 }

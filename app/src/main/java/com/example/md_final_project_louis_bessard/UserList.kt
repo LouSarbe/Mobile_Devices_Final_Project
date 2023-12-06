@@ -4,17 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
-import org.json.JSONArray
+import androidx.navigation.fragment.findNavController
 import java.io.InputStream
 
-class UsersFragment : Fragment(R.layout.fragment_users) {
-
+class UserList : Fragment(R.layout.fragment_user_list) {
+    private lateinit var adapter: UserAdapter
     companion object {
         private const val INPUT_DATA_KEY = "inputData"
 
-        fun newInstance(inputData: Map<String, String>): UsersFragment {
-            val fragment = UsersFragment()
+        fun newInstance(inputData: Map<String, String>): UserList {
+            val fragment = UserList()
             val args = Bundle()
             args.putSerializable(INPUT_DATA_KEY, inputData as HashMap<String, String>)
             fragment.arguments = args
@@ -27,27 +28,23 @@ class UsersFragment : Fragment(R.layout.fragment_users) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_users, container, false)
+        return inflater.inflate(R.layout.fragment_user_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Retrieve input data from bundle
-        val inputData = arguments?.getSerializable(INPUT_DATA_KEY) as HashMap<String, String>?
+        view.findViewById<Button>(R.id.userList_to_home_button).setOnClickListener {
+            findNavController().navigate(R.id.action_userList_to_mainFragment)
+        }
 
-        // Display input data in the UI
-        inputData?.let {
-            R.id.name_text_view = it["name"]
-            R.id.email_text_view = it["email"]
-            R.id.age_text_view = it["age"]
+        view.findViewById<Button>(R.id.userList_to_forms_button).setOnClickListener {
+            findNavController().navigate(R.id.action_userList_to_formsFragment)
         }
 
         // Load and display data from a public JSON file
-        val jsonText = loadJSONFromAsset()
-        val jsonArray = JSONArray(jsonText)
-
-        // Example: Displaying JSON data in a TextView
+        //val jsonText = loadJSONFromAsset()
+        //val jsonArray = JSONArray(jsonText)
         //json_data_text_view.text = jsonArray.toString()
     }
 

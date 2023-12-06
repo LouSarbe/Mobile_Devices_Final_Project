@@ -69,4 +69,20 @@
             tools:layout_editor_absoluteX="162dp"
             android:text="@string/submit"
             tools:ignore="MissingConstraints"/>
+    <Button
+            android:text="@string/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forms_to_home_button"
+            tools:layout_editor_absoluteY="636dp"
+            tools:layout_editor_absoluteX="74dp"
+            tools:ignore="MissingConstraints"/>
+    <Button
+            android:text="@string/users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forms_to_userList_button"
+            tools:layout_editor_absoluteY="636dp"
+            tools:layout_editor_absoluteX="255dp"
+            tools:ignore="MissingConstraints"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

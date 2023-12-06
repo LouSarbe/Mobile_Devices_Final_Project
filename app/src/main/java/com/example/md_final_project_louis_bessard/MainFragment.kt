@@ -5,8 +5,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.md_final_project_louis_bessard.R
-import com.example.md_final_project_louis_bessard.UsersFragment
-import com.example.md_final_project_louis_bessard.FormsFragment
 import androidx.navigation.fragment.findNavController
 
 class MainFragment : Fragment() {
@@ -25,21 +23,9 @@ class MainFragment : Fragment() {
         view.findViewById<Button>(R.id.go_to_forms_button).setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_formsFragment)
         }
-    }
 
-    private fun navigateToFormsFragment() {
-        val formsFragment = FormsFragment()
-        activity?.supportFragmentManager?.beginTransaction()
-            ?.replace(R.id.fragment_container, formsFragment)
-            ?.addToBackStack(null)
-            ?.commit()
-    }
-
-    private fun navigateToUsersFragment() {
-        val usersFragment = UsersFragment()
-        activity?.supportFragmentManager?.beginTransaction()
-            ?.replace(R.id.fragment_container, usersFragment)
-            ?.addToBackStack(null)
-            ?.commit()
+        view.findViewById<Button>(R.id.go_to_users_button).setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_userList)
+        }
     }
 }
