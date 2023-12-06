@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="24"
-        android:targetSdkVersion="33" />
+        android:minSdkVersion="34"
+        android:targetSdkVersion="34" />
 
     <permission
         android:name="com.example.md_final_project_louis_bessard.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
