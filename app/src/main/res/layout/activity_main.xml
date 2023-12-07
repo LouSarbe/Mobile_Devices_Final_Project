@@ -9,7 +9,7 @@
     <androidx.fragment.app.FragmentContainerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.example.md_final_project_louis_bessard.HostFragment"
+            android:name="com.example.md_final_project_louis_bessard.MainFragment"
             android:id="@+id/fragmentContainerView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
