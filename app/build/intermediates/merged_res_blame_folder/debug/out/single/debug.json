@@ -56,16 +56,16 @@
         "source": "C:\\Users\\Louis Bessard\\.gradle\\daemon\\8.0\\com.example.md_final_project_louis_bessard.app-main-49:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.md_final_project_louis_bessard.app-merged_res-47:/layout_user_holder.xml.flat",
+        "source": "com.example.md_final_project_louis_bessard.app-main-49:/layout/user_holder.xml"
+    },
+    {
         "merged": "C:\\Users\\Louis Bessard\\.gradle\\daemon\\8.0\\com.example.md_final_project_louis_bessard.app-merged_res-47:\\layout_main_fragment.xml.flat",
         "source": "C:\\Users\\Louis Bessard\\.gradle\\daemon\\8.0\\com.example.md_final_project_louis_bessard.app-main-49:\\layout\\main_fragment.xml"
     },
     {
         "merged": "C:\\Users\\Louis Bessard\\.gradle\\daemon\\8.0\\com.example.md_final_project_louis_bessard.app-merged_res-47:\\mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Louis Bessard\\.gradle\\daemon\\8.0\\com.example.md_final_project_louis_bessard.app-main-49:\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "com.example.md_final_project_louis_bessard.app-merged_res-47:/layout_main_fragment.xml.flat",
-        "source": "com.example.md_final_project_louis_bessard.app-main-49:/layout/main_fragment.xml"
     },
     {
         "merged": "C:\\Users\\Louis Bessard\\.gradle\\daemon\\8.0\\com.example.md_final_project_louis_bessard.app-merged_res-47:\\mipmap-xxhdpi_ic_launcher.webp.flat",

@@ -18,6 +18,8 @@ id formsFragment
 id forms_to_home_button
 id forms_to_userList_button
 id fragmentContainerView
+id fragment_forms
+id fragment_user_list
 id go_to_forms_button
 id go_to_users_button
 id mainFragment
@@ -29,6 +31,7 @@ id textView
 id textView2
 id userList_to_forms_button
 id userList_to_home_button
+id user_list_recycler_view
 id usersFragment
 layout activity_main
 layout fragment_forms
@@ -40,9 +43,11 @@ mipmap ic_launcher_round
 navigation nav_graph
 string age
 string app_name
+string bienvenue_sur_mon_application
 string email
 string forms
 string home
+string name
 string nom
 string remplissez_le_formulaire
 string submit

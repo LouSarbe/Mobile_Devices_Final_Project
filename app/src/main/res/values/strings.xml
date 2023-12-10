@@ -9,4 +9,5 @@
     <string name="home">Home</string>
     <string name="forms">Forms</string>
     <string name="bienvenue_sur_mon_application">Bienvenue sur mon application !</string>
+    <string name="name">Name</string>
 </resources>
