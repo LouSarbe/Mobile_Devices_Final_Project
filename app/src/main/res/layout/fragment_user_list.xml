@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                                   xmlns:tools="http://schemas.android.com/tools"
-                                                   android:id="@+id/fragment_user_list"
-                                                   android:layout_width="match_parent"
-                                                   android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fragment_user_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="0dp"
@@ -13,7 +14,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/userList_to_forms_button"
+            app:layout_constraintBottom_toBottomOf="parent"
             tools:listitem="@layout/user_holder" />
 
     <Button
@@ -22,15 +23,15 @@
             android:layout_height="wrap_content"
             android:text="@string/home"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/userList_to_forms_button" />
+            app:layout_constraintEnd_toStartOf="@+id/userList_to_forms_button"
+            app:layout_constraintTop_toTopOf="parent" />
 
     <Button
             android:id="@+id/userList_to_forms_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/forms"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/userList_to_home_button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/userList_to_home_button" />
+            app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
