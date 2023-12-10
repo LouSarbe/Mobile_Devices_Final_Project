@@ -52,4 +52,27 @@ dependencies {
 
     implementation("com.google.code.gson:gson:2.10")
 
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+
+    // Retrofit Gson Converter
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // Retrofit Kotlinx Serialization Converter
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
+
+    // Kotlinx Serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
+
+    // Kotlinx Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+
+    // Kotlinx Coroutines Test
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.5.2")
+
+    // Kotlinx Coroutines Play Services
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.5.2")
+
+    implementation ("com.squareup.okhttp3:okhttp:4.9.3")
+
 }
