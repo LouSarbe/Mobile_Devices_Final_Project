@@ -2,6 +2,7 @@ package com.example.md_final_project_louis_bessard
 
 //UserList.kt
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
@@ -47,12 +48,12 @@ class UserList : Fragment(R.layout.fragment_user_list) {
     private fun fetchUsersAndUpdateUI(userService : UserService) {
         lifecycleScope.launch {
             try {
-                val usersDTO = userService.service.getUsers() // exception here
+                val usersDTO = userService.service.getUsers() // error here
                 val users = usersDTO.map { it.toUser() }
 
                 userService.saveUsersToSharedPreferences(users)
             } catch (e: Exception) {
-                // Handle exceptions or errors here
+                Log.e("UserList", "Error fetching users: ${e.message}")
             }
         }
     }
