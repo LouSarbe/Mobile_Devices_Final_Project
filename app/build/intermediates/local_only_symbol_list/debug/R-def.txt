@@ -11,8 +11,10 @@ id action_mainFragment_to_userList
 id action_userList_to_formsFragment
 id action_userList_to_mainFragment
 id age_edit_text
+id age_text_input_layout
 id age_text_view
 id email_edit_text
+id email_text_input_layout
 id email_text_view
 id formsFragment
 id forms_to_home_button
@@ -24,6 +26,7 @@ id go_to_forms_button
 id go_to_users_button
 id mainFragment
 id name_edit_text
+id name_text_input_layout
 id name_text_view
 id nav_graph
 id submit_button
