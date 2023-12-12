@@ -12,8 +12,8 @@ import retrofit2.http.GET
 import okhttp3.MediaType.Companion.toMediaType
 
 class UserService(private val context: Context) {
-    private val BASE_URL = "https://dummyjson.com/"
-    private val PREF_NAME = "UserPrefs"
+    private val BASE_URL = "https://jsonplaceholder.typicode.com/"
+    private val PREF_NAME = "myPrefs"
     private val KEY_USERS = "users"
 
     private val json = Json { ignoreUnknownKeys = true }

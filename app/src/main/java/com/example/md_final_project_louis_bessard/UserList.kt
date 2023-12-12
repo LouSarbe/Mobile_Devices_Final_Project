@@ -48,7 +48,7 @@ class UserList : Fragment(R.layout.fragment_user_list) {
     private fun fetchUsersAndUpdateUI(userService : UserService) {
         lifecycleScope.launch {
             try {
-                val usersDTO = userService.service.getUsers() // error here
+                val usersDTO = userService.service.getUsers()
                 val users = usersDTO.map { it.toUser() }
 
                 userService.saveUsersToSharedPreferences(users)
