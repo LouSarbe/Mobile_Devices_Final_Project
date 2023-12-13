@@ -7,9 +7,9 @@ import com.google.gson.Gson
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
+import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
 import retrofit2.http.GET
-import okhttp3.MediaType.Companion.toMediaType
 
 class UserService(private val context: Context) {
     private val BASE_URL = "https://jsonplaceholder.typicode.com/"
@@ -34,9 +34,13 @@ class UserService(private val context: Context) {
             context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
         val editor: SharedPreferences.Editor = sharedPreferences.edit()
         for ((index,user) in users.withIndex()) {
-            val userJson = gson.toJson(user)
-            editor.putString("user_${System.currentTimeMillis()}", userJson)
-            editor.apply()
+            val existingValue = sharedPreferences.getString(
+                "user_${user.name}_${user.email}", null)
+            if (existingValue == null) {
+                val userJson = gson.toJson(user)
+                editor.putString("user_${user.name}_${user.email}", userJson)
+                editor.apply()
+            }
         }
     }
 }

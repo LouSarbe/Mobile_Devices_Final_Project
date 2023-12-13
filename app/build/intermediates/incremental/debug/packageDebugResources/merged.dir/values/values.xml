@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="age">Age</string>
+    <string name="app_name">MD_Final_Project_Louis_BESSARD</string>
+    <string name="bienvenue_sur_mon_application">Bienvenue sur mon application !</string>
+    <string name="email">Email</string>
+    <string name="forms">Forms</string>
+    <string name="home">Home</string>
+    <string name="name">Name</string>
+    <string name="nom">Nom</string>
+    <string name="remplissez_le_formulaire">Remplissez le formulaire</string>
+    <string name="submit">Submit</string>
+    <string name="users">Users</string>
+    <style name="Base.Theme.MD_Final_Project_Louis_BESSARD" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.MD_Final_Project_Louis_BESSARD" parent="Base.Theme.MD_Final_Project_Louis_BESSARD"/>
+</resources>
