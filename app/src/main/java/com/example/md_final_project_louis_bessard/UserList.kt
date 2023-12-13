@@ -53,7 +53,7 @@ class UserList : Fragment(R.layout.fragment_user_list) {
 
                 userService.saveUsersToSharedPreferences(users)
             } catch (e: Exception) {
-                Log.e("UserList", "Error fetching users: ${e.message}")
+                Log.e("UserList", "Error fetching users: ${e}")
             }
         }
     }

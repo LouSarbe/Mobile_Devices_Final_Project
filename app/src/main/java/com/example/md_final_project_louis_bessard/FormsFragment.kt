@@ -28,8 +28,6 @@ class FormsFragment : Fragment(R.layout.fragment_forms) {
                 val newUser = User(name, email, age)
                 sharedPreferenceHelper.saveUser(newUser)
                 clearForm(view)
-            } else {
-                // Handle input validation error
             }
         }
 

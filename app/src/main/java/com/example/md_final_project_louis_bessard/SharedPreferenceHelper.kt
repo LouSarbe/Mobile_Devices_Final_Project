@@ -6,7 +6,8 @@ import android.content.SharedPreferences
 import com.google.gson.Gson
 
 class SharedPreferenceHelper(context: Context) {
-    private val sharedPreferences: SharedPreferences = context.getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
+    private val sharedPreferences: SharedPreferences = context.getSharedPreferences(
+        "myPrefs", Context.MODE_PRIVATE)
     private val gson = Gson()
 
     fun saveUser(user: User) {
@@ -19,7 +20,6 @@ class SharedPreferenceHelper(context: Context) {
     fun getUserList(): List<User> {
         val allEntries = sharedPreferences.all
         val userList = mutableListOf<User>()
-
         for ((_, value) in allEntries) {
             val json = value as String
             val user = gson.fromJson(json, User::class.java)
